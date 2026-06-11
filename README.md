@@ -136,3 +136,12 @@ jupyter notebook credit_card_fraud_detection.ipynb
 ```
 
 or execute it directly on Kaggle.
+
+---
+
+## Author
+
+Vikas Yadav
+
+B.Tech., Computer Engineering
+Jamia Millia Islamia, New Delhi

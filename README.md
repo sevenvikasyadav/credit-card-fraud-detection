@@ -103,11 +103,11 @@ The results highlight the effectiveness of ensemble methods, particularly XGBoos
 
 ## ROC Curve
 
-![ROC Curve](images/roc_curve.png)
+![ROC Curve](images/roc_curves.png)
 
 ## Precision Recall Curve
 
-![PR Curve](images/pr_curve.png)
+![PR Curve](images/precision_recall_curve.png)
 
 ## SHAP Explainability
 
@@ -118,7 +118,7 @@ The results highlight the effectiveness of ensemble methods, particularly XGBoos
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/credit-card-fraud-detection.git
+git clone https://github.com/sevenvikasyadav/credit-card-fraud-detection.git
 
 cd credit-card-fraud-detection
 

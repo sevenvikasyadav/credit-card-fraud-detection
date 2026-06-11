@@ -77,6 +77,20 @@ if st.button("Predict", use_container_width=True):
 
     probability = model.predict_proba(input_df)[0][1]
 
+    actual = int(transaction["Actual_Class"])
+
+    actual_label = (
+        "Fraud"
+        if actual == 1
+        else "Legitimate"
+    )
+
+    predicted_label = (
+        "Fraud"
+        if prediction == 1
+        else "Legitimate"
+    )
+
     st.subheader("Prediction Result")
 
     st.metric(
@@ -90,20 +104,21 @@ if st.button("Predict", use_container_width=True):
         st.success("✅ Legitimate Transaction")
 
     st.info(
-        f"Selected Profile Actual Label: {actual_label}"
+        f"Actual Label: {actual_label}"
     )
 
-    if prediction == transaction["Actual_Class"]:
+    if prediction == actual:
         st.success(
-            "🎯 The prediction matches the selected profile label."
+            "🎯 Great! The model prediction matched the actual label."
         )
     else:
         st.warning(
-            """
-            The prediction differs from the selected profile label.
+            f"""
+            The model predicted **{predicted_label}** while the selected
+            profile was actually **{actual_label}**.
 
-            This can happen because the transaction amount was modified,
-            creating a new synthetic scenario.
+            This difference can occur because the transaction amount
+            was modified, creating a new synthetic scenario.
             """
         )
 

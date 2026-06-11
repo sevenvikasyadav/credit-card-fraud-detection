@@ -57,14 +57,6 @@ selected = st.selectbox(
 
 transaction = demo_df.iloc[selected]
 
-actual_label = (
-    "Fraud"
-    if transaction["Actual_Class"] == 1
-    else "Legitimate"
-)
-
-st.write(f"Selected Profile Type: **{actual_label}**")
-
 if st.checkbox("Show Profile Details (V1–V28)"):
     st.dataframe(
         transaction.drop("Actual_Class").to_frame().T,

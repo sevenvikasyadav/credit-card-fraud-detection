@@ -21,7 +21,6 @@ Detect fraudulent credit card transactions using an XGBoost model trained on the
 - SMOTE for handling class imbalance
 - XGBoost classifier
 - SHAP explainability
-- Interactive hybrid demo
 """)
 
 st.info(

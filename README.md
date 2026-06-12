@@ -1,5 +1,7 @@
 # Credit Card Fraud Detection using Machine Learning
 
+🔗 **Live Demo:** https://credit-card-fraud-detection-vikasyadav.streamlit.app/
+
 ## Overview
 
 Credit card fraud has become a major challenge for financial institutions, leading to billions of dollars in losses worldwide every year. Detecting fraudulent transactions is particularly difficult because fraudulent activities represent only a tiny fraction of all transactions, creating a highly imbalanced dataset.
@@ -115,27 +117,75 @@ The results highlight the effectiveness of ensemble methods, particularly XGBoos
 
 ---
 
-## Installation
+## Running Locally
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/sevenvikasyadav/credit-card-fraud-detection.git
-
 cd credit-card-fraud-detection
+```
 
+Install the required dependencies:
+
+```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Running the Project
-
-Open the notebook:
+Launch the Streamlit application:
 
 ```bash
-jupyter notebook credit_card_fraud_detection.ipynb
+streamlit run app.py
 ```
 
-or execute it directly on Kaggle.
+Open the application in your browser:
+
+```
+http://localhost:8501
+```
+## Explore the Complete Machine Learning Pipeline
+
+The complete end-to-end workflow is documented in the notebook:
+
+```text
+credit_card_fraud_detection.ipynb
+```
+
+The notebook includes:
+
+- Exploratory Data Analysis (EDA)
+- Data Preprocessing
+- Feature Scaling
+- Handling Class Imbalance using SMOTE
+- Logistic Regression
+- Random Forest
+- XGBoost
+- Model Comparison
+- ROC Curve Analysis
+- Precision–Recall Analysis
+- SHAP Explainability
+- Model Saving
+- 
+---
+
+## Execute on Kaggle
+
+This project was originally developed and tested using Kaggle Notebooks.
+
+To reproduce the results on Kaggle:
+
+1. Download `credit_card_fraud_detection.ipynb`.
+2. Create a new Kaggle Notebook.
+3. Attach the **Credit Card Fraud Detection** dataset.
+4. Upload the notebook.
+5. Run all cells sequentially.
+
+Dataset used:
+
+- Credit Card Fraud Detection Dataset (Kaggle)
+- Total Transactions: 284,807
+- Fraudulent Transactions: 492
+- Legitimate Transactions: 284,315
 
 ---
 
